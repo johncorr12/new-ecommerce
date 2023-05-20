@@ -20,9 +20,10 @@ const SingleProduct = () => {
             <h1 className='text-danger fw-bold'> {title}</h1>
             <h4 className='text-success lh-base'>{description}</h4>
             <h3>${price}</h3>
-            <div className='d-flex justify-content-between'>  
+            <div className='d-flex justify-content-between w-75'>  
             <button  className='btn btn-primary'>add to cart</button>
               <Link to='/' className='btn btn-primary'> Back to home</Link>
+        
             </div>
           </div>
         </div>

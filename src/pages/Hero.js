@@ -38,7 +38,7 @@ const Hero = () => {
                 <div className="h-100 p-1 text-center card-inner shadow-sm border border-3 rounded" key={id}>
 
                   <Link className="text-decoration-none" to ={`/SingleProduct/${id}`}>
-                  <img className=" inmg-fluid w-100" src={image} alt={title} />
+                  <img className=" img-fluid w-100" src={image} alt={title} />
                   <p className="fw-bold">${price} </p>
                   </Link>
                  

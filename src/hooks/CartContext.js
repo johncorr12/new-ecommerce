@@ -9,6 +9,24 @@ export const CartProvider = ({ children }) => {
   useEffect(()=> {
     localStorage.setItem('cartItem',JSON.stringify(cartItem))
   },[cartItem])
+
+  function handleIncrease(product){
+    const productSelected = cartItem.find((singleCartItem)=>singleCartItem.id === product.id)
+    if(productSelected){
+      setCartItem(cartItem.map((oneItem)=> oneItem.id === product.id ? {...productSelected, quantity:productSelected.quantity + 1} : oneItem))
+    }
+  }
+
+  function handleDecrease (product) {
+    const productSelected = cartItem.find(
+      (singleCartItem)=> singleCartItem.id === product.id
+    )
+    if(productSelected.quantity === 1) {
+      setCartItem(cartItem.filter((oneItem)=>oneItem.id !== product.id ))
+    }else{
+      setCartItem(cartItem.map((dd)=> dd.id === product.id ? {... productSelected,quantity:productSelected.quantity - 1} : dd))
+    }
+  }
   
   let handleAddToCart=(product)=>{
     const productSelected = cartItem.find((singleCartItem)=>singleCartItem.id === product.id)
@@ -18,6 +36,11 @@ export const CartProvider = ({ children }) => {
       setCartItem([...cartItem,{...product,quantity : 1}])
     }
   }
+
+  //reduce ftn
+  const totalPrice = cartItem.reduce((price, item)=> price + item.
+  quantity* item.price ,0  
+  )
   
   return(
     <CartContext.Provider value={{ cartItem, setCartItem,handleAddToCart }}>
@@ -26,27 +49,5 @@ export const CartProvider = ({ children }) => {
       
 
   )
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 export default CartContext

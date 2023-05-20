@@ -17,7 +17,7 @@ const Navbar = () => {
         <ul>
           <li className='list-unstyled'>
           <Link className='text-decoration-none' to ='/'>
-         <h2 className='fst-italic text-light'>John the coder</h2>
+         <h2 className='fw-bold text-light'>John the coder</h2>
           </Link>
           </li>
         </ul>

@@ -1,0 +1,22 @@
+.component-title-WomenClothing{
+    background-color: #94004f;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 5rem;
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.hero-img{
+    height: 32.5rem;
+  }
+  .WomenClothing-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    /* place-content: center; */
+    /* place-items: center; */
+    gap: 3rem;
+  }

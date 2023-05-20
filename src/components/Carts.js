@@ -3,34 +3,17 @@ import "../styles/Carts.css";
 import CartContext from "../hooks/CartContext";
 
 const Carts = () => {
-  const { cartItem,setCartItem } = useContext(CartContext);
-  function handleIncrease(product){
-    const productSelected = cartItem.find((singleCartItem)=>singleCartItem.id === product.id)
-    if(productSelected){
-      setCartItem(cartItem.map((oneItem)=> oneItem.id === product.id ? {...productSelected, quantity:productSelected.quantity + 1} : oneItem))
-    }
-  }
-
-  function handleDecrease (product) {
-    const productSelected = cartItem.find(
-      (singleCartItem)=> singleCartItem.id === product.id
-    )
-    if(productSelected.quantity === 1) {
-      setCartItem(cartItem.filter((oneItem)=>oneItem.id !== product.id ))
-    }else{
-      setCartItem(cartItem.map((dd)=> dd.id === product.id ? {... productSelected,quantity:productSelected.quantity - 1} : dd))
-    }
-  }
+  const { cartItem,setCartItem,handleDecrease,handleIncrease,totalPrice} = useContext(CartContext);
   return (
     <div className="container">
       <div>
         {cartItem.length === 0 && (
           <div>
-            <h3>cart empty</h3>
+            <h3>No item in the cart</h3>
           </div>
         )}
       </div>
-      <div>
+      <div className="container">
         {cartItem.map((singleCartItem) => {
           const { image, id, title, price, quantity, description } = singleCartItem;
           return (
@@ -46,7 +29,7 @@ const Carts = () => {
                 <h4 className="text-success lh-base"> {description} </h4>
                 <div>
                   <h4>
-                    {quantity} * {price}{" "}
+                    {quantity} * {price}
                   </h4>
                   <div  className="d-flex justify-content-between w-75 gap-4">
                     <button onClick={()=> handleIncrease(singleCartItem)} className="btn btn-primary w-75">increase</button>
@@ -56,14 +39,15 @@ const Carts = () => {
                 </div>
               </div>
             </div>
-          );
-        })}
+          )
+        })} 
         {cartItem.length >= 1 && (
           <div>
-            <button onClick={()=>setCartItem([])} className="btn btn-primary w-40" >{cartItem.length === 1 ? 'clear item' : 'clear all'}</button>
+            <button onClick={()=>setCartItem([])} className="btn btn-danger mt-5 fs-5 fw-bold w-25" >{cartItem.length === 1 ? 'clear item' : 'clear all'}</button>
           </div>
         )}
       </div>
+      <h1  className="fw-bold"> $(Total price) </h1>
     </div>
   );
 };
