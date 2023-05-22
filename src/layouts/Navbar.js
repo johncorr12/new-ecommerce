@@ -17,7 +17,7 @@ const Navbar = () => {
         <ul>
           <li className='list-unstyled'>
           <Link className='text-decoration-none' to ='/'>
-         <h2 className='fw-bold text-light'>John the coder</h2>
+         <h2 className='fw-bold text-light'>✔Johnny</h2>
           </Link>
           </li>
         </ul>
@@ -35,8 +35,9 @@ const Navbar = () => {
               </Link>
             </li>
             <li className='list-unstyled'>
-              <Link to='/Carts' className='text-decoration-none text-light fs-4'>
-              <BsCart4/> 
+              <Link to='/Carts' className='text-decoration-none text-light fs-4'> 
+
+              <BsCart4/> Cart
                ({cartItem.length})
               </Link>
             </li>

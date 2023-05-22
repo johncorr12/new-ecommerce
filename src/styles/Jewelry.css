@@ -17,3 +17,17 @@
     /* place-items: center; */
     gap: 3rem;
   }
+.jewelry img{
+  height: 25rem;
+  padding: 1rem;
+}
+
+@media screen and (max-width:768px) {
+  .jewelry img {
+    grid-template-columns: 1fr 1fr;
+    height:5rem;
+
+  }
+  
+}
+

@@ -4,6 +4,7 @@ import Hero from '../pages/Hero'
 import Jewelry from '../pages/Jewelry'
 import Electronics from '../pages/Electronics'
 import WomenClothing from '../pages/WomenClothing'
+import LastPage from '../pages/LastPage'
 
 const Home = ({cartItem, setCartItem,handleAddToCart}) => {
   return (
@@ -12,6 +13,7 @@ const Home = ({cartItem, setCartItem,handleAddToCart}) => {
       <Jewelry/>
       <Electronics/>
       <WomenClothing/>
+      <LastPage/>
     </div>
   )
 }

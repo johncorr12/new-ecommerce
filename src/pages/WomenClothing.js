@@ -24,18 +24,18 @@ const WomenClothing = () => {
         <div className="component-title-WomenClothing">
             <h2>WOMEN'S CATEGORY</h2>
         </div>
-        <div className="WomenClothing-container">
+        <div className="WomenClothing">
         {data.map((datumWomenClothing) => {
           const { id, image, price, title } = datumWomenClothing;
           return (
             <div
-              className="h-100 p-1 text-center jewelry-inner shadow-sm rounded border-3 border"
+              className="h-100 p-3 mt-4 text-center jewelry-inner shadow-sm rounded border-3 border"
               key={id}
             >
               <Link
                 className="text-decoration-none"
                 to={`/SingleProduct/${id}`}
-              >
+              > 
                 <img className="img-fluid w-50" src={image} alt={title} />
                 <p className="fw-bold">${price} </p>
               </Link>

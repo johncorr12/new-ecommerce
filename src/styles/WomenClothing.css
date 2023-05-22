@@ -13,10 +13,33 @@
 .hero-img{
     height: 32.5rem;
   }
-  .WomenClothing-container{
+  .WomenClothing{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(3,1fr);
     /* place-content: center; */
     /* place-items: center; */
     gap: 3rem;
   }
+  .women-img img{
+    height: 20rem;
+    padding-top: 1rem;
+  }
+
+  @media screen and (max-width:768px) {
+    .WomenClothing{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      
+    }
+    .WomenClothing img{
+      height: 6rem;
+      width: 5rem;
+
+    }
+
+   
+
+   
+    
+  }
+  

@@ -42,12 +42,12 @@ const Carts = () => {
           )
         })} 
         {cartItem.length >= 1 && (
-          <div>
+          <div className="text-center">
             <button onClick={()=>setCartItem([])} className="btn btn-danger mt-5 fs-5 fw-bold w-25" >{cartItem.length === 1 ? 'clear item' : 'clear all'}</button>
           </div>
         )}
       </div>
-      <h1  className="fw-bold"> $(Total price) </h1>
+      <h1  className="fw-bold text-center"> $(Total price) </h1>
     </div>
   );
 };

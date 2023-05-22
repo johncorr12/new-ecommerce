@@ -10,10 +10,27 @@
     align-items: center;
 
 }
-  .Electronics-container{
+  .electron{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(3,1fr);
     /* place-content: center; */
     /* place-items: center; */
     gap: 3rem;
   }
+  .electron img{
+      height: 20rem;
+      padding: 1rem;
+    
+  }
+
+  @media screen and (max-width:768px) {
+    .electron{
+      grid-template-columns: 1fr 1fr;
+    }
+    .electron img{
+      height: 8rem;
+      width: 8rem;
+    }
+    
+  }
+  
