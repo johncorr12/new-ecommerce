@@ -29,7 +29,7 @@ const Electronics = () => {
           const { id, image, price, title } = datumElectronics;
           return (
             <div
-              className=" h-100 p-3 text-center jewelry-inner shadow-sm rounded border-3 border"
+              className=" h-100 p-3 mt-5 text-center jewelry-inner shadow-sm rounded border-3 border"
               key={id}
             >
               <Link
