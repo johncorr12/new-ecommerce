@@ -23,7 +23,7 @@ const Footer = () => {
           )
         })}  
       </div>
-      <p className='text-center'>Copyright © {} Johnny.com All rights reserved </p>
+      <p className='text-center'>Copyright © {} Johnny-city.com All rights reserved </p>
 
 
     </div>
