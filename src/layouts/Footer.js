@@ -5,7 +5,7 @@ import { dataFooter } from '../FooterDB'
 const Footer = () => {
   const CopyRight = new Date().getFullYear() 
   return (
-    <div className='footer mt-5 bg-dark text-danger'>
+    <div className='footer mt-5 bg-dark text-danger '>
       <div className='container d-lg-flex justify-content-between align-items-center p-4 footer-main'>
         {dataFooter.map((datumFooter)=>{
           const { id, title, contact, about, careers, blog} =datumFooter
@@ -17,6 +17,7 @@ const Footer = () => {
               <li> {about} </li>
               <li> {careers} </li>
               <li>  {blog} </li>
+            
 
            </ul>
           </div>

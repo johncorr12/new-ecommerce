@@ -6,7 +6,6 @@ import { BsCart4 } from 'react-icons/bs';
 import CartContext from '../hooks/CartContext';
 
 
-
 const Navbar = () => {
   const {cartItem} = useContext(CartContext)
   return (

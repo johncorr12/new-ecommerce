@@ -8,7 +8,7 @@ export const CartProvider = ({ children }) => {
   const [cartItem,setCartItem] = useState(cartItemsFromLocalStorage)
   useEffect(()=> {
     localStorage.setItem('cartItem',JSON.stringify(cartItem))
-  },[cartItem])
+  },[cartItem]) 
 
   function handleIncrease(product){
     const productSelected = cartItem.find((singleCartItem)=>singleCartItem.id === product.id)
@@ -41,9 +41,11 @@ export const CartProvider = ({ children }) => {
   const totalPrice = cartItem.reduce((price, item)=> price + item.
   quantity* item.price ,0  
   )
-  
+  useEffect(()=>{
+    localStorage.setItem('cartitem',JSON.stringify(cartItem))
+  },[cartItem])
   return(
-    <CartContext.Provider value={{ cartItem, setCartItem,handleAddToCart }}>
+    <CartContext.Provider value={{ cartItem, setCartItem,handleAddToCart,handleDecrease,handleIncrease,totalPrice }}>
       {children}
     </CartContext.Provider>
       
