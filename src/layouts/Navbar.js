@@ -34,7 +34,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li className='list-unstyled'>
-              <Link to='/Carts' className='text-decoration-none text-light fs-4'> 
+              <Link to='/Carts' className='text-decoration-none text-light fs-5'> 
 
               <BsCart4/> Cart
                ({cartItem.length})
