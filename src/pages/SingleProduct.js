@@ -18,6 +18,7 @@ const SingleProduct = () => {
           <div className="col-sm-12 text-center col-md-4">
             <img className="img-fluid w-100" src={image} alt={title} />
           </div>
+          
           <div className="col-sm-12 col-md-7">
             <h1 className="text-danger fw-bold"> {title} </h1>
             <h4 className="text-success lh-base">{description}</h4> 

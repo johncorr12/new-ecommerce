@@ -13,7 +13,9 @@ const Carts = () => {
           </div>
         )}
       </div>
+  
       <div className="container">
+    
         {cartItem.map((singleCartItem) => {
           const { image, id, title, price, quantity, description } = singleCartItem;
           return (
@@ -24,7 +26,7 @@ const Carts = () => {
               <div className="col-md-5">
                 <img className="w-100" src={image} alt={title} />
               </div>
-              <div className="col-md-6">
+              <div className="col-md-6"> 
                 <h2 className="text-danger"> {title}</h2>
                 <h4 className="text-success lh-base"> {description} </h4>
                 <div>
@@ -47,7 +49,7 @@ const Carts = () => {
           </div>
         )}
       </div>
-      <h1  className="fw-bold text-center"> $(Total price) </h1>
+      <h3  className="fw-bold mt-2 text-center"> ${totalPrice} </h3>
     </div>
   );
 };

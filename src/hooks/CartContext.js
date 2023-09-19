@@ -1,8 +1,6 @@
 import React,{ createContext, useState, useEffect } from 'react'
 const CartContext = createContext()
-
 const cartItemsFromLocalStorage = JSON.parse(localStorage.getItem('cartItem')) || []
-
 
 export const CartProvider = ({ children }) => {
   const [cartItem,setCartItem] = useState(cartItemsFromLocalStorage)
@@ -10,7 +8,7 @@ export const CartProvider = ({ children }) => {
     localStorage.setItem('cartItem',JSON.stringify(cartItem))
   },[cartItem]) 
 
-  function handleIncrease(product){
+  function handleIncrease(product){ 
     const productSelected = cartItem.find((singleCartItem)=>singleCartItem.id === product.id)
     if(productSelected){
       setCartItem(cartItem.map((oneItem)=> oneItem.id === product.id ? {...productSelected, quantity:productSelected.quantity + 1} : oneItem))
@@ -48,8 +46,6 @@ export const CartProvider = ({ children }) => {
     <CartContext.Provider value={{ cartItem, setCartItem,handleAddToCart,handleDecrease,handleIncrease,totalPrice }}>
       {children}
     </CartContext.Provider>
-      
-
   )
 }
 export default CartContext

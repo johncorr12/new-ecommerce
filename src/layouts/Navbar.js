@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useContext } from 'react'
 import Marque from './Marque'
 import { Link } from 'react-router-dom'
 import '../styles/Navbar.css'
@@ -23,9 +23,9 @@ const Navbar = () => {
 
         <nav className='w-50 d-flex flex-row-reverse justify-content-between'>
           <ul className='d-sm-none d-md-flex justify-content-between w-75'>
-            <li className='list-unstyled d-none-x-sm'>
-              <Link className='text-decoration-none text-light fs-4' to='/'>
-                Account
+            <li className='list-unstyled '>
+              <Link className='text-decoration-none text-light fs-4' to='/Sneakers'>
+                Sneakers
               </Link>
             </li>
             <li className='list-unstyled d-none-x-sm'>

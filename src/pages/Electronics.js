@@ -12,7 +12,6 @@ const Electronics = () => {
     const { data, error, loading } = useFetch(
       "https://fakestoreapi.com/products/category/electronics"
     );
-  
     const notify = () => {
       toast.success("An item has been added !", {
         position: toast.POSITION.TOP_CENTER,
@@ -48,7 +47,6 @@ const Electronics = () => {
               >
                 add to cart
               </button>
-              <ToastContainer />
             </div>
           );
         })}
